@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maskking.vapepl.com/sitemap.xml
