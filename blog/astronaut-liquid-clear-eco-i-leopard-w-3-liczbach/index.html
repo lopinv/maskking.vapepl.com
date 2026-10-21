@@ -31,18 +31,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>Maskking · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-maskking/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-maskking/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
-<main class="wrap"><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://maskking.vapepl.com/">Maskking</a><span class="sep">›</span><a href="https://maskking.vapepl.com/blog/">Blog</a><span class="sep">›</span>Astronaut liquid: CLEAR, ECO i LEOPARD w 3 liczbach</nav>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-maskking/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
+<main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://maskking.vapepl.com/">Maskking</a><span class="sep">›</span><a href="https://maskking.vapepl.com/blog/">Blog</a><span class="sep">›</span>Astronaut liquid: CLEAR, ECO i LEOPARD w 3 liczbach</nav>
 <div class="article-layout">
   <article class="article-body">
     <span class="kicker sm">Poradnik Maskking</span>
@@ -67,9 +87,122 @@
     <section class="panel tiers" aria-label="Rabaty ilościowe"><div class="panel-side"></div><div class="panel-main"><h2>Rabaty ilościowe na VapePL.COM</h2><div class="tiers-grid"><div class="tier"><span class="tier-qty">3+ szt.</span><span class="tier-pct">−5%</span></div><div class="tier"><span class="tier-qty">5+ szt.</span><span class="tier-pct">−8%</span></div><div class="tier"><span class="tier-qty">10+ szt.</span><span class="tier-pct">−12%</span></div><div class="tier"><span class="tier-qty">15+ szt.</span><span class="tier-pct">−20%</span></div></div><p class="tiers-note">Im więcej sztuk, tym większa zniżka — rabat nalicza się automatycznie w koszyku.</p><p class="tiers-cta"><a class="btn-buy" href="https://vapepl.com/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=tiers" target="_blank" rel="noopener">Zamów z rabatem na VapePL.COM</a></p></div></section>
     <a class="btn-buy lg" href="https://vapepl.com/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=article-astronaut-liquid-clear-eco-i-leopard-w-3-liczbach" target="_blank" rel="noopener">Kup Maskking na VapePL.COM</a>
   </article>
-  <aside class="article-side"><aside class="panel rel-articles"><h2>Zobacz również</h2><ul class="link-list"><li><a href="/blog/apple-zing-vs-sour-apple-ktory-smak-jablka-wybrac/">Apple Zing vs Sour Apple – który smak jabłka wybrać?</a></li><li><a href="/blog/black-cherry-black-co-to-za-smak/">Black cherry black: co to za smak</a></li><li><a href="/blog/black-cherry-cola-jaki-to-smak-i-gdzie-go-znajdziesz/">Black cherry cola: jaki to smak i gdzie go znajdziesz</a></li></ul></aside></aside>
+  <aside class="article-side"><aside class="panel rel-articles"><div class="panel-side"></div><div class="panel-main"><h2>Zobacz również</h2><p class="rel-count">30 powiązanych artykułów</p><ul class="link-list"><li><a href="/blog/passion-fruit-co-to-marakuja-i-jej-nuta-w-e-papierosie/">Passion fruit co to? Marakuja i jej nuta w e-papierosie</a></li><li><a href="/blog/ile-kosztuje-jednorazowka-tyrant-vs-stag-bar-vs-lux/">Ile kosztuje jednorazówka: TYRANT vs STAG BAR vs LUX</a></li><li><a href="/blog/jednorazowka-mietowa-17-modeli-koszt-puffs-i-wybor/">Jednorazówka miętowa: 17 modeli, koszt puffs i wybór</a></li><li><a href="/blog/marki-jednorazowek-7-marek-i-koszt-jednego-puffs-w-liczbach/">Marki jednorazówek: 7 marek i koszt jednego puffs w liczbach</a></li><li><a href="/blog/apple-peach-e-papieros-smak-koszty-i-najlepsze-modele/">Apple peach e-papieros: smak, koszty i najlepsze modele</a></li><li><a href="/blog/black-cherry-black-czy-taki-smak-istnieje/">Black cherry black: czy taki smak istnieje?</a></li><li><a href="/blog/grape-mint-co-to-za-smak-w-czym-go-znajdziesz-i-ile-kosztuje/">Grape mint co to za smak — w czym go znajdziesz i ile kosztuje?</a></li><li><a href="/blog/blue-razz-berry-8-modeli-z-tym-smakiem-w-porownaniu/">Blue razz berry: 8 modeli z tym smakiem w porównaniu</a></li><li><a href="/blog/ets-aero-x-40k-puffs-co-to-i-ile-kosztuje-zaciag/">ETS Aero-X 40k puffs – co to i ile kosztuje zaciąg</a></li><li><a href="/blog/huckleberry-w-e-papierosie-czy-ten-smak-istnieje/">Huckleberry w e-papierosie: czy ten smak istnieje?</a></li><li><a href="/blog/black-cherry-black-co-to-za-smak/">Black cherry black: co to za smak</a></li><li><a href="/blog/black-cherry-black-tyrant-vs-super-vs-icex/">Black cherry black: TYRANT vs SUPER vs ICEX</a></li><li><a href="/blog/black-cherry-cola-jaki-to-smak-i-gdzie-go-znajdziesz/">Black cherry cola: jaki to smak i gdzie go znajdziesz</a></li><li><a href="/blog/black-ice-w-jednorazowkach-4-modele-i-koszt-pufy/">Black ice w jednorazówkach: 4 modele i koszt pufy</a></li><li><a href="/blog/fizzy-cherry-ice-jaki-to-smak-i-czy-warto-go-sprobowac/">Fizzy Cherry Ice – jaki to smak i czy warto go spróbować?</a></li><li><a href="/blog/maskking-icex-recenzja-jednorazowego-e-papierosa-z-40-000-puffow/">MaskKing IceX – recenzja jednorazowego e-papierosa z 40 000 puffów</a></li><li><a href="/blog/merrymi-blade-vs-inne-jednorazowki-porownanie/">Merrymi Blade vs inne jednorazówki – porównanie</a></li><li><a href="/blog/miami-mint-smak-ktory-wybiora-fani-miety/">Miami Mint – smak, który wybiorą fani mięty</a></li><li><a href="/blog/najmocniejszy-e-papieros-moc-to-nie-tylko-puffs/">Najmocniejszy e-papieros? Moc to nie tylko puffs</a></li><li><a href="/blog/maskking-40k-test-icex-40000-i-ranking-klasy-40k/">Maskking 40k – test ICEX 40000 i ranking klasy 40k</a></li><li><a href="/blog/miami-mint-w-e-papierosie-co-to-za-smak/">Miami Mint w e-papierosie: co to za smak?</a></li><li><a href="/blog/jednorazowka-0-nikotyny-przewodnik-po-e-papierosach-bez-nikotyny/">Jednorazówka 0 nikotyny – przewodnik po e-papierosach bez nikotyny</a></li><li><a href="/blog/apple-zing-vs-sour-apple-ktory-smak-jablka-wybrac/">Apple Zing vs Sour Apple – który smak jabłka wybrać?</a></li><li><a href="/blog/jednorazowki-40-000-buchow-prostokatne-modele/">Jednorazówki 40 000 buchow – prostokątne modele</a></li><li><a href="/blog/miami-mint-co-to-za-smak-i-gdzie-go-znajdziesz/">Miami Mint — co to za smak i gdzie go znajdziesz?</a></li><li><a href="/blog/miami-mint-czy-warto-6-modeli-i-koszt-za-1000-puffs/">Miami Mint — czy warto? 6 modeli i koszt za 1000 puffs</a></li><li><a href="/blog/fumot-leopard-40k-co-realnie-dostajesz-za-90-zl-i-20-ml-liquidu/">FUMOT LEOPARD 40k — co realnie dostajesz za 90 zł i 20 ml liquidu</a></li><li><a href="/blog/e-papieros-40000-puffs-ranking-i-porownanie/">E papieros 40000 puffs – ranking i porównanie</a></li><li><a href="/blog/black-cherry-black-tyrant-lux-tornado-i-icex-w-liczbach/">Black cherry black: TYRANT, LUX, TORNADO i ICEX w liczbach</a></li><li><a href="/blog/hifancy-45k-watermelon-ice-co-to-za-smak-i-czy-warto/">HIFANCY 45k Watermelon Ice: co to za smak i czy warto</a></li></ul></div></aside></aside>
 </div>
-<div class="sticky-cta"><span class="sticky-cta-info">Realizacja i płatność: <b>vapepl.com</b></span><a class="btn-buy" style="text-decoration:none" href="https://vapepl.com/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=sticky" target="_blank" rel="noopener">Kup na VapePL.COM</a></div>
+<section class="block alt article-recos">
+  <div class="block-head"><div><span class="kicker sm">Polecane produkty</span><h2>Dopasowane do tego artykułu</h2></div></div>
+  <div class="grid"><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-black-cherry-peach/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Black Cherry Peach" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-black-cherry-peach/">MASKKING ICEX 40000 PUFFS — Black Cherry Peach</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-black-cherry-peach" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="ice-menthol" data-fam="ice">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-blue-razz-ice/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Blue Razz Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#0891b2">Ice &amp; Menthol</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-blue-razz-ice/">MASKKING ICEX 40000 PUFFS — Blue Razz Ice</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="napoje" data-fam="cola fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-cherry-cola/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — CHERRY COLA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#d97706">Napoje</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-cherry-cola/">MASKKING ICEX 40000 PUFFS — CHERRY COLA</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-grape-storm/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Grape Storm" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-grape-storm/">MASKKING ICEX 40000 PUFFS — Grape Storm</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-grape-storm" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-mixed-berry/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — MIXED BERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-mixed-berry/">MASKKING ICEX 40000 PUFFS — MIXED BERRY</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-mixed-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-apple-zing/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Apple Zing" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-apple-zing/">MASKKING ICEX 40000 PUFFS — Apple Zing</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-apple-zing" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="ice-menthol" data-fam="mint">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-miami-mint/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Miami Mint" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#0891b2">Ice &amp; Menthol</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-miami-mint/">MASKKING ICEX 40000 PUFFS — Miami Mint</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-miami-mint" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-passion-fruit-mango/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Passion Fruit Mango" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-passion-fruit-mango/">MASKKING ICEX 40000 PUFFS — Passion Fruit Mango</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-passion-fruit-mango" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-strawberry-kiwi/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Strawberry Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-strawberry-kiwi/">MASKKING ICEX 40000 PUFFS — Strawberry Kiwi</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/maskking-icex-40000-puffs-strawberry-watermelon/"><img src="/assets/img/1beb2e40910915c3-480.webp" alt="MASKKING ICEX 40000 PUFFS — Strawberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">40000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/maskking-icex-40000-puffs-strawberry-watermelon/">MASKKING ICEX 40000 PUFFS — Strawberry Watermelon</a>
+    <div class="price-row">
+      <span class="price">80 zł</span>
+      <span class="price-old">90 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/maskking-icex-40000-puffs/?utm_source=maskking&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-maskking-icex-40000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article></div>
+</section>
 
 </main>
 <footer class="site-foot">
